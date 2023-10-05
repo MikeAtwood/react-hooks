@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Count from "./components/Effect";
 import Button from "./components/Buttons"
+import "./index.css"
 
 const App = () => {
   const [color, setColor] = useState("black");
 
   useEffect(() => {
-    const changeColorOnClick = () => {
-      if (color === "black") {
-        setColor("red");
-      } else {
-        setColor("black");
+    const square = document.getElementById("myDiv")
+    const changeColorOnClick = (event) => {
+      if (event.target === square) {
+        if (color === "black") {
+          setColor("red");
+        } else {
+          setColor("black");
+        }
       }
     };
     
@@ -22,7 +26,7 @@ const App = () => {
   }, [color]);
 
   return (
-    <div>
+    <div className="main-container">
       <div
         id="myDiv"
         style={{
