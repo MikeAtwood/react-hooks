@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Count from "./components/Effect";
+import Button from "./components/Buttons"
 
 const App = () => {
   const [color, setColor] = useState("black");
@@ -37,6 +38,9 @@ const App = () => {
         This div can change color. Click on me!
       </div>
       <Count />
+      <Button text="Click Me!" color="blue" fontSize={12} />
+      <Button text="Don't Click Me!" color="red" fontSize={12} />
+      <Button text="Click Me!" color="blue" fontSize={20} />
     </div>
   );
 };
