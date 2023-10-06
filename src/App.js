@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Count from "./components/Effect";
 import Button from "./components/Buttons"
+import Clock from "./components/Clock";
 import "./index.css"
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
       <Button text="Click Me!" color="blue" fontSize={12} />
       <Button text="Don't Click Me!" color="red" fontSize={12} />
       <Button text="Click Me!" color="blue" fontSize={20} />
+      <Clock />
     </div>
   );
 };
